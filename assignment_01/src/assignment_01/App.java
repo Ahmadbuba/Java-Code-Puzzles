@@ -19,8 +19,8 @@ public class App {
 		String result = str;
 		int len = str.length();
 		if (len >= 3 && len % 2 == 1) {
-			int mid = len/2;
-			String middleWords = result.substring(mid-1,mid+2);
+			int midIndex = len/2;
+			String middleWords = result.substring(midIndex-1,midIndex+2);
 			result = middleWords;
 		}
 		return result;
