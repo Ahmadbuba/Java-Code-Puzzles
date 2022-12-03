@@ -5,7 +5,7 @@ public class ArraysPractice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-//		int [] container = new int [30];
+//		int [] container = new int[30];
 //		
 //		for (int i = 0; i < container.length; i++) {
 //			System.out.println(container[i]);
