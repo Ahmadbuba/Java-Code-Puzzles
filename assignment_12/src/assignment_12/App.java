@@ -22,16 +22,19 @@ public class App {
 		String result = "";
 		int strLen = str.length();
 		for (int i = 0; i < strLen; i++) {
-			int indexOfNext = i + 1;
-			if(indexOfNext < strLen ) {
-				char nextChar = str.charAt(indexOfNext);
-				if (nextChar != '*') {
-					result += ""+ str.charAt(i);
-				}
+			if (i == 0 && str.charAt(i) != '*') {
+				result += str.charAt(i);
 			}
 			
+			if (i > 0 && str.charAt(i) != '*' && str.charAt(i-1) != '*'  ) {
+				result += str.charAt(i);
+			}
 			
+			if (i > 0 && str.charAt(i) == '*' && str.charAt(i-1) != '*' ) {
+				result = result.substring(0, result.length()-1);
+			}
 		}
+		
 		
 		return result;
 	}
