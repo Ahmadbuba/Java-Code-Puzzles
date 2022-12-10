@@ -22,8 +22,10 @@ public class App {
 	
 	public static String endoo(String str) {
 		
-		// complete the body of this method
-		return str;
+		if (str.equals("")) return str;
+		if (str.charAt(0) == 'o') return endoo(str.substring(1)) + 'o';
+		else return str.charAt(0) + endoo(str.substring(1));
+	
 		
 		
 	}
